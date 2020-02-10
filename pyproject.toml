@@ -8,6 +8,7 @@ authors = ["josemota1 <zemariamota@hotmail.com>"]
 python = "^3.7"
 pandas = "^1.0.1"
 boto3 = "^1.11.12"
+scikit-learn = "^0.22.1"
 
 [tool.poetry.dev-dependencies]
 torch = "^1.4.0"
