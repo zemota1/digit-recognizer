@@ -1,6 +1,6 @@
 # Digit-recognizer
 
-Digit recognizer using the MNIST data.
+Digit recognizer using MNIST data.
 
 # Author
 - José Mota
