@@ -1,4 +1,3 @@
-import numpy as np
 import pandas as pd
 
 import torch
@@ -21,3 +20,8 @@ if __name__ == '__main__':
 
     predicted = torch.max(outputs.data, 1)[1].numpy()
     print(predicted)
+
+    submission = pd.read_csv("../data/sample_submission.csv")
+    submission['Label'] = predicted
+
+    submission.to_csv("../data/submission.csv", index=False)

@@ -68,7 +68,7 @@ def test_step(test_data):
 
 if __name__ == '__main__':
 
-    features, targets, to_predict = get_data('data/train.csv', 'data/test.csv')
+    features, targets, to_predict = get_data('../data/train.csv', '../data/test.csv')
 
     xx_train, xx_test, yy_train, yy_test = train_test_split(
         features,
@@ -81,7 +81,7 @@ if __name__ == '__main__':
     test = torch.utils.data.TensorDataset(xx_test, yy_test)
 
     batch_size = 100
-    n_iters = 1300
+    n_iters = 3000
     num_epochs = n_iters/(len(train)/batch_size)
     num_epochs = int(num_epochs)
 
@@ -96,4 +96,4 @@ if __name__ == '__main__':
     count = 0
     for epoch in range(num_epochs):
         count = train_step(train_loader, test_loader, count)
-    #torch.save(model.state_dict(), "model/mnist_cnn")
+    torch.save(model.state_dict(), "model/mnist_cnn")
